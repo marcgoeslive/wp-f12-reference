@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,sCAAuC;EACrC,MAAM,EAAI,CAAC;EACX,OAAO,EAAG,CAAC;;AAGb,4DAA6D;EAC3D,UAAU,EAAG,CAAC",
+"sources": ["../scss/reference-admin.scss"],
+"names": [],
+"file": "reference-admin.css"
+}

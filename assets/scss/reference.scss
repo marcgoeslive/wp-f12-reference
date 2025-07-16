@@ -1,0 +1,149 @@
+@import "reference-general";
+
+.f12-reference-ce-image-grid__items {
+  @include flexbox();
+  @include flex_flow(row wrap);
+  @include justify-content(center);
+  width : 100%;
+}
+
+.f12-reference-ce-title {
+  display        : block;
+  text-align     : center;
+  padding-bottom : 30px;
+}
+
+.f12-reference-wrapper {
+  clear     : both;
+  //padding   : 50px 0;
+  padding   : 0;
+  max-width : 1280px;
+  margin    : 0 auto;
+
+  h2 {
+    text-transform : uppercase;
+    font-size      : 1.5rem;
+  }
+}
+
+.f12-reference-divider {
+  display    : block;
+  margin     : 1rem auto;
+  text-align : center;
+  overflow   : hidden;
+  height     : 1px;
+  border-top : 3px solid rgba(0, 0, 0, 0.2);
+  width      : 50px;
+}
+
+.f12-reference-ce-image-hover {
+  @include flexbox();
+  @include flex(1 1 32%);
+  max-width    : 32.5%;
+  overflow     : hidden;
+  position     : relative;
+  margin-right : 5px;
+  border       : 1px solid #edeaea;
+}
+
+.f12-reference-ce-image-hover img {
+  max-width : 100%;
+  min-width : 100%;
+}
+
+.f12-reference-ce-image-hover span {
+  position         : absolute;
+  bottom           : 0;
+  left             : 0;
+  width            : 100%;
+  padding          : 10px;
+  background-color : rgba(0, 0, 0, 0.8);
+  color            : #fff;
+  text-align       : center;
+  font-size        : 0.9rem;
+}
+
+.f12-reference-ce-image-hover:hover {
+  .f12-reference-ce-image-hover__background,
+  .f12-reference-ce-image-hover__content {
+    opacity : 1;
+
+    h2, p {
+      transform : translateX(0);
+      opacity   : 1;
+    }
+  }
+}
+
+.f12-reference-ce-image-hover__background,
+.f12-reference-ce-image-hover__content {
+  position   : absolute;
+  left       : 0;
+  top        : 0;
+  width      : 100%;
+  height     : 100%;
+  @include flexbox();
+  text-align : center;
+  opacity    : 0;
+  transition : opacity linear 200ms;
+}
+
+.f12-reference-ce-image-hover__background {
+  background-color : rgba(255, 255, 255, 0.9);
+}
+
+.f12-reference-ce-image-hover__content .f12-reference-ce-title {
+  @include flexbox();
+  @include flex-flow(column wrap);
+  @include justify-content(center);
+  width : 100%;
+
+  h2 {
+    width         : 100%;
+    margin-bottom : 0;
+    line-height   : 100% !important;
+    transform     : translateX(-50px);
+    opacity       : 0;
+    transition    : all linear 200ms;
+  }
+  p {
+    width      : 100%;
+    color      : #333;
+    font-size  : 0.9rem;
+    transform  : translateX(50px);
+    opacity    : 0;
+    transition : all linear 200ms;
+  }
+}
+
+.f12-reference-ce-terms {
+  @include flexbox();
+  @include flex-flow(row wrap);
+  width   : 100%;
+  padding : 20px;
+  @include box-sizing(border-box);
+  @include align-items(flex-start);
+  @include justify-content(center);
+
+  .f12-reference-ce-term {
+    @include flex(0 1 auto);
+    background-color : rgba(0, 0, 0, 0.3);
+    padding          : 5px 10px;
+    border-radius    : 15px;
+    border           : 0px solid #999;
+    color            : #fff;
+    font-size        : 0.9rem;
+    margin-bottom    : 5px;
+    margin-right     : 5px;
+    transition       : all linear 200ms;
+    transform        : translateX(-50px);
+    opacity          : 0;
+  }
+}
+
+.f12-reference-ce-image-hover:hover {
+  .f12-reference-ce-term {
+    transform : translateX(0);
+    opacity   : 1;
+  }
+}
